@@ -7,15 +7,16 @@
     </head>
     <body style='margin : 0px; overflow: hidden;'>
         <a-scene embedded arjs>
-        <a-assets>
-            <a-asset-item class="a-asset-item" id="logo1" src="3d-models/FC-Groningen-logo-wit.glb"></a-asset-item>
-            <a-asset-item class="a-asset-item" id="logo2" src="3d-models/Ajax-logo.glb"></a-asset-item>
-          </a-assets>
+            <a-assets>
+                <a-asset-item class="a-asset-item" id="logo1" src="3d-models/FC-Groningen-logo-wit.glb"></a-asset-item>
+                <a-asset-item class="a-asset-item" id="logo2" src="3d-models/Ajax-logo.glb"></a-asset-item>
+            </a-assets>
 
-          <a-marker type='pattern' preset="hiro">
-            <a-entity position="-1 0 0" gltf-model="#logo1" scale="0.2 0.2 0.2" animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"></a-entity>
-            <a-entity position="1 0 0" gltf-model="#logo2" scale="0.2 0.2 0.2" animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"></a-entity>
-          </a-marker>
+            <a-marker type='pattern' preset="hiro">
+                <a-entity position="-1 0 0" gltf-model="#logo1" scale="0.2 0.2 0.2" animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"></a-entity>
+                <a-entity position="1 0 0" gltf-model="#logo2" scale="0.2 0.2 0.2" animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"></a-entity>
+            </a-marker>
+
           <a-entity camera></a-entity>
         </a-scene>
       </body> 
