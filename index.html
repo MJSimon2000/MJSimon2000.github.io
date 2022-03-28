@@ -13,9 +13,9 @@
                 <a-asset-item class="a-asset-item" id="logo2" src="3d-models/Ajax-logo.glb"></a-asset-item>
             </a-assets>
 
-            <a-marker type='pattern' preset="hiro">
-                <a-entity position="-1 0 0" gltf-model="#logo1" scale="0.2 0.2 0.2" animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"></a-entity>
-                <a-entity position="1 0 0" gltf-model="#logo2" scale="0.2 0.2 0.2" animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"></a-entity>
+            <a-marker type="pattern" preset="hiro" cursor="rayOrigin: mouse">
+                <a-entity class="logo1" position="-1 0 0" gltf-model="#logo1" scale="0.2 0.2 0.2" animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"></a-entity>
+                <a-entity class="logo2" position="1 0 0" gltf-model="#logo2" scale="0.2 0.2 0.2" animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"></a-entity>
             </a-marker>
             
           <a-entity camera></a-entity>
@@ -28,10 +28,11 @@
       </body>
 
       <script>
-          window.onload = function (){
-              document.querySelector(".say-hi-button").addEventListener("click", function(){
-                  alert("Hi");
-              })
+            document.querySelector(".say-hi-button").addEventListener("click", myFunction);
+
+          function myFunction(){
+            document.querySelector(".logo1").setAttribute('visible', false);
+            alert('set visable to false');
           }
       </script>
 </html>
