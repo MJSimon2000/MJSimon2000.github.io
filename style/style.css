@@ -11,7 +11,19 @@
   }
 
   .say-hi-button {
-    padding: 0.25em;
+    margin-right: 100px;
+    padding: 0.5em;
+    border-radius: 4px;
+    border: none;
+    background: white;
+    color: black;
+    width: 4em;
+    height: 2em;
+  }
+
+  .return {
+    margin-left: 100px;
+    padding: 0.5em;
     border-radius: 4px;
     border: none;
     background: white;

@@ -23,16 +23,24 @@
 
         <div class="buttons">
             <button class="say-hi-button">Hallo</button>
-          </div>
+            <button class="return">Return</button>
+        </div>
 
       </body>
 
       <script>
             document.querySelector(".say-hi-button").addEventListener("click", myFunction);
+            document.querySelector(".return").addEventListener("click", secondFunction);
 
           function myFunction(){
             document.querySelector(".logo1").setAttribute('visible', false);
             alert('set visable to false');
           }
+
+          function secondFunction(){
+            document.querySelector(".logo1").setAttribute('visible', true);
+            alert('set visable to true');
+          }
+
       </script>
 </html>
