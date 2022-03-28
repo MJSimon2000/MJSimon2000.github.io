@@ -30,21 +30,25 @@
       </body>
 
       <script>
+          // select all buttons
             document.querySelector(".scene1").addEventListener("click", firstFunction);
             document.querySelector(".scene2").addEventListener("click", secondFunction);
             document.querySelector(".scene3").addEventListener("click", thirdFunction)
 
+          // set the first logo as not visible and the second one as visible
           function firstFunction(){
             document.querySelector(".logo1").setAttribute('visible', false);
             document.querySelector(".logo2").setAttribute('visible', true);
           }
 
+          // set the first logo as visible and the second one as not visible
           function secondFunction(){
             document.querySelector(".logo1").setAttribute('visible', true);
             document.querySelector(".logo2").setAttribute('visible', false);
 
           }
 
+          // set the both logos as visible
           function thirdFunction(){
             document.querySelector(".logo1").setAttribute('visible', true);
             document.querySelector(".logo2").setAttribute('visible', true);
