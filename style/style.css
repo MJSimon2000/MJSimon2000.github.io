@@ -10,24 +10,13 @@
     z-index: 10;
   }
 
-  .say-hi-button {
-    margin-right: 100px;
+  .scene1, .scene2, .scene3 {
+    margin-right: 50px;
     padding: 0.5em;
     border-radius: 4px;
     border: none;
     background: white;
     color: black;
-    width: 4em;
-    height: 2em;
-  }
-
-  .return {
-    margin-left: 100px;
-    padding: 0.5em;
-    border-radius: 4px;
-    border: none;
-    background: white;
-    color: black;
-    width: 4em;
+    width: 6em;
     height: 2em;
   }

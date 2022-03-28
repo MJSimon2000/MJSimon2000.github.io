@@ -15,24 +15,26 @@
 
             <a-marker type="pattern" preset="hiro" cursor="rayOrigin: mouse">
                 <a-entity class="logo1" position="0 0 0" gltf-model="#logo1" scale="0.2 0.2 0.2" animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"></a-entity>
-                <!-- <a-entity class="logo2" position="1 0 0" gltf-model="#logo2" scale="0.2 0.2 0.2" animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"></a-entity> -->
+                <a-entity class="logo2" position="1 0 0" gltf-model="#logo2" scale="0.2 0.2 0.2" animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"></a-entity>
             </a-marker>
             
           <a-entity camera></a-entity>
         </a-scene>
 
         <div class="buttons">
-            <button class="say-hi-button">Hallo</button>
-            <button class="return">Return</button>
+            <button class="scene1">Scene 1</button>
+            <button class="scene2">Scene 2</button>
+            <button class="scene3">Scene 3</button>
         </div>
 
       </body>
 
       <script>
-            document.querySelector(".say-hi-button").addEventListener("click", myFunction);
-            document.querySelector(".return").addEventListener("click", secondFunction);
+            document.querySelector(".scene1").addEventListener("click", firstFunction);
+            document.querySelector(".scene2").addEventListener("click", secondFunction);
+            document.querySelector(".scene3").addEventListener("click", thirdFunction)
 
-          function myFunction(){
+          function firstFunction(){
             document.querySelector(".logo1").setAttribute('visible', false);
             alert('set visable to false');
           }
@@ -40,6 +42,11 @@
           function secondFunction(){
             document.querySelector(".logo1").setAttribute('visible', true);
             alert('set visable to true');
+          }
+
+          function thirdFunction(){
+            document.querySelector(".logo1").setAttribute('scale', '2 2 2');
+            alert('bigger');
           }
 
       </script>
