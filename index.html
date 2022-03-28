@@ -4,9 +4,10 @@
         <title>FC Groningen Matchday - AR omgeving</title>
         <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+        <link rel="stylesheet" href="style/style.css">
     </head>
     <body style='margin : 0px; overflow: hidden;'>
-        <a-scene embedded arjs>
+        <a-scene embedded arjs="trackingMethod:best;">
             <a-assets>
                 <a-asset-item class="a-asset-item" id="logo1" src="3d-models/FC-Groningen-logo-wit.glb"></a-asset-item>
                 <a-asset-item class="a-asset-item" id="logo2" src="3d-models/Ajax-logo.glb"></a-asset-item>
@@ -16,8 +17,21 @@
                 <a-entity position="-1 0 0" gltf-model="#logo1" scale="0.2 0.2 0.2" animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"></a-entity>
                 <a-entity position="1 0 0" gltf-model="#logo2" scale="0.2 0.2 0.2" animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"></a-entity>
             </a-marker>
-
+            
           <a-entity camera></a-entity>
         </a-scene>
-      </body> 
+
+        <div class="buttons">
+            <button class="say-hi-button">Hallo</button>
+          </div>
+
+      </body>
+
+      <script>
+          window.onload = function (){
+              document.querySelector(".say-hi-button").addEventListener("click", function(){
+                  alert("Hi");
+              })
+          }
+      </script>
 </html>
