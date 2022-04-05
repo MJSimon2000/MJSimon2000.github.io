@@ -12,13 +12,13 @@
             <a-assets>
                 <a-asset-item class="a-asset-item" id="logo1" src="3d-models/FC-Groningen-logo-wit.glb"></a-asset-item>
                 <a-asset-item class="a-asset-item" id="logo2" src="3d-models/Ajax-logo.glb"></a-asset-item>
-                <a-asset-item class="a-asset-item" id="player" src="3d-models/player_test.glb" response-type="arraybuffer"></a-asset-item>
+                <a-asset-item class="a-asset-item" id="player" src="3d-models/player_test.glb"></a-asset-item>
             </a-assets>
 
             <a-marker type="pattern" preset="hiro" cursor="rayOrigin: mouse">
                 <a-entity class="logo1" position="-1 0 0" gltf-model="#logo1" scale="0.2 0.2 0.2" animation-mixer></a-entity>
                 <a-entity class="logo2" position="1 0 0" gltf-model="#logo2" scale="0.2 0.2 0.2" animation-mixer></a-entity>
-                <a-entity class="logo2" position="0 0 0" gltf-model="#player" scale="0.2 0.2 0.2" animation-mixer></a-entity>
+                <a-entity class="logo2" position="0 0 0" rotation="0 90 0" gltf-model="#player" scale="2 2 2" animation-mixer></a-entity>
             </a-marker>
             
           <a-entity camera></a-entity>
