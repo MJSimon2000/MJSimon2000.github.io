@@ -13,12 +13,14 @@
                 <a-asset-item class="a-asset-item" id="logo1" src="3d-models/FC-Groningen-logo-wit.glb"></a-asset-item>
                 <a-asset-item class="a-asset-item" id="logo2" src="3d-models/Ajax-logo.glb"></a-asset-item>
                 <a-asset-item class="a-asset-item" id="player" src="3d-models/player_test.glb"></a-asset-item>
+                <a-asset-item class="a-asset-item" id="stadion" src="3d-models/Field_2.glb"></a-asset-item>
             </a-assets>
 
             <a-marker type="pattern" preset="hiro" cursor="rayOrigin: mouse">
-                <a-entity class="logo1" position="-1 0 0" gltf-model="#logo1" scale="0.2 0.2 0.2" animation-mixer></a-entity>
-                <a-entity class="logo2" position="1 0 0" gltf-model="#logo2" scale="0.2 0.2 0.2" animation-mixer></a-entity>
-                <a-entity class="logo2" position="0 0 0" rotation="0 90 0" gltf-model="#player" scale="2 2 2" animation-mixer></a-entity>
+                <!-- <a-entity class="logo1" position="-1 0 0" gltf-model="#logo1" scale="0.2 0.2 0.2" animation-mixer></a-entity>
+                <a-entity class="logo2" position="1 0 0" gltf-model="#logo2" scale="0.2 0.2 0.2" animation-mixer></a-entity> -->
+                <!-- <a-entity class="logo2" position="0 0 0" rotation="0 90 0" gltf-model="#player" scale="2 2 2" animation-mixer></a-entity> -->
+                <a-entity class="stadion" position="0 0 0" rotation="0 90 0" gltf-model="#stadion" scale="0.2 0.2 0.2" animation-mixer></a-entity>
             </a-marker>
             
           <a-entity camera></a-entity>
@@ -28,16 +30,18 @@
             <button class="scene1">Scene 1</button>
             <button class="scene2">Scene 2</button>
             <button class="scene3">Scene 3</button>
+            <button class="scene4">Scene 4</button>
         </div>
 
       </body>
 
       <script>
-          // select all buttons
+          // select all buttons and add function
             document.querySelector(".scene1").addEventListener("click", firstFunction);
             document.querySelector(".scene2").addEventListener("click", secondFunction);
-            document.querySelector(".scene3").addEventListener("click", thirdFunction)
-
+            document.querySelector(".scene3").addEventListener("click", thirdFunction);
+            document.querySelector(".scene4").addEventListener("click", revealFieldFunction);
+            
           // set the first logo as not visible and the second one as visible
           function firstFunction(){
             document.querySelector(".logo1").setAttribute('visible', false);
@@ -54,6 +58,13 @@
           function thirdFunction(){
             document.querySelector(".logo1").setAttribute('visible', true);
             document.querySelector(".logo2").setAttribute('visible', true);
+          }
+
+          //reveal the field!
+          function revealFieldFunction(){
+            document.querySelector(".logo1").setAttribute('visible', false);
+            document.querySelector(".logo2").setAttribute('visible', false);
+            document.querySelector(".field").setAttribute('visible', true);
           }
 
       </script>
