@@ -10,15 +10,13 @@
     <body style='margin : 0px; overflow: hidden;'>
         <a-scene embedded arjs="trackingMethod:best;" vr-mode-ui="enabled: false" raycaster="objects: .clickable">
             <a-assets>
-                <a-asset-item class="a-asset-item" id="logo1" src="3d-models/FC-Groningen-logo-wit.glb"></a-asset-item>
-                <a-asset-item class="a-asset-item" id="logo2" src="3d-models/Ajax-logo.glb"></a-asset-item>
                 <a-asset-item class="a-asset-item" id="stadion" src="3d-models/Field_2.glb"></a-asset-item>
+                <a-asset-item class="a-asset-item" id="formation" src="3d-models/Formation.glb"></a-asset-item>
             </a-assets>
 
             <a-marker type="pattern" preset="hiro" cursor="rayOrigin: mouse">
-                <!-- <a-entity class="logo1" position="-1 0 0" gltf-model="#logo1" scale="0.2 0.2 0.2" animation-mixer></a-entity>
-                <a-entity class="logo2" position="1 0 0" gltf-model="#logo2" scale="0.2 0.2 0.2" animation-mixer></a-entity> -->
-                <a-entity class="stadion" position="0 0 0" rotation="0 0 0" gltf-model="#stadion" scale="0.2 0.2 0.2" animation-mixer="loop: once"></a-entity>
+                <a-entity class="stadion" position="0 0 0" rotation="0 0 0" gltf-model="#stadion" scale="0.2 0.2 0.2" animation-mixer></a-entity>
+                <a-entity class="formation" position="0 0 0" rotation="0 0 0" gltf-model="#formation" scale="0.1 0.1 0.1" visible="false" animation-mixer></a-entity>
             </a-marker>
             
           <a-entity camera></a-entity>
@@ -27,8 +25,6 @@
         <div class="buttons">
             <button class="scene1">Scene 1</button>
             <button class="scene2">Scene 2</button>
-            <button class="scene3">Scene 3</button>
-            <button class="scene4">Scene 4</button>
         </div>
 
       </body>
@@ -36,32 +32,18 @@
       <script>
           // select all buttons and add function
             document.querySelector(".scene1").addEventListener("click", firstFunction);
-            document.querySelector(".scene2").addEventListener("click", secondFunction);
-            document.querySelector(".scene3").addEventListener("click", thirdFunction);
-            document.querySelector(".scene4").addEventListener("click", revealFieldFunction);
+            document.querySelector(".scene2").addEventListener("click", revealFieldFunction);
             
-          // set the first logo as not visible and the second one as visible
+          // set the first stage
           function firstFunction(){
-            document.querySelector(".logo1").setAttribute('visible', false);
-            document.querySelector(".logo2").setAttribute('visible', true);
+            document.querySelector(".stadion").setAttribute('visible', true);
+            document.querySelector(".formation").setAttribute('visible', false);
           }
 
-          // set the first logo as visible and the second one as not visible
-          function secondFunction(){
-            document.querySelector(".logo1").setAttribute('visible', true);
-            document.querySelector(".logo2").setAttribute('visible', false);
-          }
-
-          // set the both logos as visible
-          function thirdFunction(){
-            document.querySelector(".logo1").setAttribute('visible', true);
-            document.querySelector(".logo2").setAttribute('visible', true);
-          }
-
-          //reveal the field!
+          //reveal the formation! (stage 2)
           function revealFieldFunction(){
-            document.querySelector(".logo1").setAttribute('visible', false);
-            document.querySelector(".logo2").setAttribute('visible', false);
+            document.querySelector(".stadion").setAttribute('visible', false);
+            document.querySelector(".formation").setAttribute('visible', true);
           }
 
       </script>
