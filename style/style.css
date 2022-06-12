@@ -1,3 +1,14 @@
+.logo{
+  position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
 .buttons {
     position: absolute;
     bottom: 0;
@@ -10,7 +21,7 @@
     z-index: 10;
   }
 
-  .scene1, .scene2, .scene3, .scene4 {
+  .scene1, .scene2{
     margin-right: 20px;
     padding: 0.5em;
     border-radius: 4px;

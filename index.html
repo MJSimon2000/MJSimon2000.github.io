@@ -8,7 +8,12 @@
         <link rel="stylesheet" href="style/style.css">
     </head>
     <body style='margin : 0px; overflow: hidden;'>
-        <a-scene embedded arjs="trackingMethod:best;" vr-mode-ui="enabled: false" raycaster="objects: .clickable" renderer="logarithmicDepthBuffer: true">
+
+      <div class="logo">
+        <img src="./img/test.png" alt="logo_FCG" height="90">
+      </div>
+
+        <a-scene embedded arjs="trackingMethod:best;" vr-mode-ui="enabled: false" raycaster="objects: .clickable" renderer="logarithmicDepthBuffer: true" colorManagement="true" sortObjects="true">
             <a-assets>
                 <a-asset-item class="a-asset-item" id="stadion" src="3d-models/Field_2.glb"></a-asset-item>
                 <a-asset-item class="a-asset-item" id="formation" src="3d-models/Formation.glb"></a-asset-item>
