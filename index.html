@@ -20,8 +20,12 @@
             </a-assets>
 
             <a-marker preset='custom' type='pattern' url='./img/pattern-qr-code.patt' smooth="true" smoothCount="10" smoothTolerance="0.1" smoothThreshold="5" raycaster="objects: .clickable" emitevents="true" cursor="fuse:false; rayOrigin:mouse;">
-                <a-entity class="stadion" position="0 0 0" rotation="0 0 0" gltf-model="#stadion" scale="0.2 0.2 0.2" animation-mixer></a-entity>
-                <a-entity class="formation" position="0 0 0" rotation="0 0 0" gltf-model="#formation" scale="0.05 0.05 0.05" visible="false" animation-mixer></a-entity>
+              <a-entity light="type: ambient; color: #BBB"></a-entity>
+              <a-entity light="type: directional; color: #FFF; intensity: 2" position="-0.5 1 1"></a-entity>              
+                <a-entity class="stadion" position="0 0 0" rotation="0 0 0" gltf-model="#stadion" scale="0.2 0.2 0.2" visible="false" animation-mixer></a-entity>
+              <a-entity light="type: ambient; color: #BBB"></a-entity>
+              <a-entity light="type: directional; color: #FFF; intensity: 2" position="-0.5 1 1"></a-entity>
+                <a-entity class="formation" position="0 0 1" rotation="0 0 0" gltf-model="#formation" scale="0.05 0.05 0.05" visible="true" animation-mixer class="clickable" gesture-handler="minScale: 0.15; maxScale: 10"></a-entity>
             </a-marker>
             
           <a-entity camera></a-entity>
