@@ -19,7 +19,7 @@
                 <a-asset-item class="a-asset-item" id="formation" src="3d-models/Formation.glb"></a-asset-item>
             </a-assets>
 
-            <a-marker type="pattern" preset="custom" url="./img/QR-code.patt" cursor="rayOrigin: mouse">
+            <a-marker preset='custom' type='pattern' url='./img/pattern-qr-code.patt' smooth="true" smoothCount="10" smoothTolerance="0.1" smoothThreshold="5" raycaster="objects: .clickable" emitevents="true" cursor="fuse:false; rayOrigin:mouse;">
                 <a-entity class="stadion" position="0 0 0" rotation="0 0 0" gltf-model="#stadion" scale="0.2 0.2 0.2" animation-mixer></a-entity>
                 <a-entity class="formation" position="0 0 0" rotation="0 0 0" gltf-model="#formation" scale="0.05 0.05 0.05" visible="false" animation-mixer></a-entity>
             </a-marker>
