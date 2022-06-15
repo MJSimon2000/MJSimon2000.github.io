@@ -15,19 +15,19 @@
         <img src="./img/test.png" alt="logo_FCG" height="90">
       </div>
 
-        <a-scene embedded arjs="trackingMethod:best;" vr-mode-ui="enabled: false" renderer="logarithmicDepthBuffer: true" colorManagement="true" sortObjects="true">
+        <a-scene embedded arjs="trackingMethod:best;" vr-mode-ui="enabled: false" renderer="logarithmicDepthBuffer: true" colorManagement="true" sortObjects="true" gesture-detector id="scene">
             <a-assets>
                 <a-asset-item class="a-asset-item" id="stadion" src="3d-models/Field_2.glb"></a-asset-item>
                 <a-asset-item class="a-asset-item" id="formation" src="3d-models/Formation.glb"></a-asset-item>
             </a-assets>
 
-            <a-marker preset='custom' type='pattern' url='./img/pattern-qr-code.patt' smooth="true" smoothCount="10" smoothTolerance="0.1" smoothThreshold="5" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;" id="markerA" material="" arjs-anchor="" arjs-hit-testing="">
+            <a-marker preset='custom' type='pattern' url='./img/pattern-qr-code.patt' smooth="true" smoothCount="10" smoothTolerance="0.1" smoothThreshold="5" raycaster="objects: .clickable" emitevents="true" cursor="fuse:false; rayOrigin:mouse;">
               <a-entity light="type: ambient; color: #BBB"></a-entity>
               <a-entity light="type: directional; color: #FFF; intensity: 2" position="-0.5 1 1"></a-entity>              
                 <a-entity class="stadion" position="0 0 0" rotation="0 0 0" gltf-model="#stadion" scale="0.2 0.2 0.2" visible="false" animation-mixer></a-entity>
               <a-entity light="type: ambient; color: #BBB"></a-entity>
               <a-entity light="type: directional; color: #FFF; intensity: 2" position="-0.5 1 1"></a-entity>
-                <a-entity class="clickable" id="formation" position="0 0 1" rotation="0 0 0" gltf-model="#formation" scale="0.05 0.05 0.05" visible="true" animation-mixer gesture-handler=""></a-entity>
+                <a-entity class="formation clickable" position="0 0 1" rotation="0 0 0" gltf-model="#formation" scale="0.05 0.05 0.05" visible="true" animation-mixer gesture-handler=""></a-entity>
             </a-marker>
             
           <a-entity camera></a-entity>
@@ -49,13 +49,13 @@
           // set the first stage
           function firstFunction(){
             document.querySelector(".stadion").setAttribute('visible', true);
-            document.querySelector("#formation").setAttribute('visible', false);
+            document.querySelector(".formation").setAttribute('visible', false);
           }
 
           //reveal the formation! (stage 2)
           function revealFieldFunction(){
             document.querySelector(".stadion").setAttribute('visible', false);
-            document.querySelector("#formation").setAttribute('visible', true);
+            document.querySelector(".formation").setAttribute('visible', true);
           }
 
       </script>
