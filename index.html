@@ -27,7 +27,7 @@
                 <a-entity class="stadion" position="0 0 0" rotation="0 0 0" gltf-model="#stadion" scale="0.2 0.2 0.2" visible="false" animation-mixer></a-entity>
               <a-entity light="type: ambient; color: #BBB"></a-entity>
               <a-entity light="type: directional; color: #FFF; intensity: 2" position="-0.5 1 1"></a-entity>
-                <a-entity class="formation clickable" position="0 0 1" rotation="0 0 0" gltf-model="#formation" scale="0.05 0.05 0.05" visible="true" animation-mixer gesture-handler=""></a-entity>
+                <a-entity class="clickable" id="formation" position="0 0 1" rotation="0 0 0" gltf-model="#formation" scale="0.05 0.05 0.05" visible="true" animation-mixer gesture-handler=""></a-entity>
             </a-marker>
             
           <a-entity camera></a-entity>
@@ -49,13 +49,13 @@
           // set the first stage
           function firstFunction(){
             document.querySelector(".stadion").setAttribute('visible', true);
-            document.querySelector(".formation").setAttribute('visible', false);
+            document.querySelector("#formation").setAttribute('visible', false);
           }
 
           //reveal the formation! (stage 2)
           function revealFieldFunction(){
             document.querySelector(".stadion").setAttribute('visible', false);
-            document.querySelector(".formation").setAttribute('visible', true);
+            document.querySelector("#formation").setAttribute('visible', true);
           }
 
       </script>
