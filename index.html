@@ -22,6 +22,11 @@
                 <a-asset-item class="a-asset-item" id="stats" src="3d-models/Stats.glb"></a-asset-item>
             </a-assets>
 
+            <div class="middle-buttons">
+              <button class="back">Terug</button>
+              <button class="next">Volgende</button>
+            </div>
+
             <a-marker preset='custom' type='pattern' url='./img/pattern-qr-code.patt' smooth="true" smoothCount="10" smoothTolerance="0.1" smoothThreshold="5" raycaster="objects: .clickable" emitevents="true" cursor="fuse:false; rayOrigin:mouse;">
               <a-entity light="type: ambient; color: #BBB"></a-entity>
               <a-entity light="type: directional; color: #FFF; intensity: 2" position="-0.5 1 1"></a-entity>              
@@ -41,8 +46,6 @@
             <button class="scene1">Intro</button>
             <button class="scene2">Opstelling</button>
             <button class="scene3">Statestieken</button>
-            <button class="next">Volgende</button>
-            <button class="back">Terug</button>
         </div>
 
       </body>
