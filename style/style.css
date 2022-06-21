@@ -21,7 +21,7 @@
     z-index: 10;
   }
 
-  .scene1, .scene2, .scene3{
+  .scene1, .scene2, .scene3, .next, .back{
     margin: 10px;
     border-radius: 4px;
     width: 100%;
