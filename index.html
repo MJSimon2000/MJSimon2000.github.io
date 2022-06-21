@@ -22,11 +22,6 @@
                 <a-asset-item class="a-asset-item" id="stats" src="3d-models/Stats.glb"></a-asset-item>
             </a-assets>
 
-            <div class="middle-buttons">
-              <button class="back">Terug</button>
-              <button class="next">Volgende</button>
-            </div>
-
             <a-marker preset='custom' type='pattern' url='./img/pattern-qr-code.patt' smooth="true" smoothCount="10" smoothTolerance="0.1" smoothThreshold="5" raycaster="objects: .clickable" emitevents="true" cursor="fuse:false; rayOrigin:mouse;">
               <a-entity light="type: ambient; color: #BBB"></a-entity>
               <a-entity light="type: directional; color: #FFF; intensity: 2" position="-0.5 1 1"></a-entity>              
@@ -74,8 +69,6 @@
             document.querySelector(".stadion").setAttribute('visible', false);
             document.querySelector(".formation").setAttribute('visible', false);
             document.querySelector(".stats").setAttribute('visible', true);
-            document.querySelector(".next").setAttribute('visible', true);
-            document.querySelector(".back").setAttribute('visible', true);
           }
 
       </script>
