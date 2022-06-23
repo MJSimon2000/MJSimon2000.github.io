@@ -36,4 +36,10 @@
   .scene1:active {
     background-color: white;
     color: #008e5a;
+    transition: none;
+  }
+
+  .delay{
+    transition: all 0.2s;
+    transition-delay: 300ms;
   }
