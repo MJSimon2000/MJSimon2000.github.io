@@ -49,6 +49,7 @@
             document.querySelector(".scene1").addEventListener("click", firstFunction);
             document.querySelector(".scene2").addEventListener("click", revealFieldFunction);
             document.querySelector(".scene3").addEventListener("click", revealStatsFunction);
+            document.querySelector(".scene4").addEventListener("click", revealHistoryFunction);
             
           // set the first stage
           function firstFunction(){
@@ -64,10 +65,20 @@
             document.querySelector(".stats").setAttribute('visible', false);
           }
 
+          //reveal the stats of one player (stage3)
           function revealStatsFunction(){
             document.querySelector(".stadion").setAttribute('visible', false);
             document.querySelector(".formation").setAttribute('visible', false);
             document.querySelector(".stats").setAttribute('visible', true);
+          }
+          
+          //reveal the history between the teams (stage4)
+
+          function revealHistoryFunction(){
+            document.querySelector(".stadion").setAttribute('visible', false);
+            document.querySelector(".formation").setAttribute('visible', false);
+            document.querySelector(".stats").setAttribute('visible', false);
+            // document.querySelector(".")
           }
 
       </script>

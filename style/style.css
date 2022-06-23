@@ -32,3 +32,9 @@
     display: block;
     text-transform: uppercase;
   }
+
+  .scene1:active, .scene2:active, .scene3:active, .scene4:active{
+    background-color: white;
+    color: #008e5a;
+    border: 1px solid #00000000;
+  }
