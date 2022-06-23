@@ -33,7 +33,7 @@
     text-transform: uppercase;
   }
 
-  .scene1:active {
+  .scene1:active, .scene2:active, .scene3:active, .scene4:active {
     background-color: white;
     color: #008e5a;
     transition: none;
